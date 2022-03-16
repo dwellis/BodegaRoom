@@ -14,10 +14,14 @@ import java.lang.StringBuilder
 
 const val BASE_URL = "https://fakestoreapi.com/"
 
+// runblocking scope on refactor
 class MainActivity : AppCompatActivity() {
 
     lateinit var myAdapter: MyAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
+
+    // loadingAnimation.checkForAPI
+    //  loadingAnimation.visible
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         getMyData()
     }
 
+    //coroutine scope on refactor
     private fun getMyData() {
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())

@@ -17,6 +17,8 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerV
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
+        // image resource is String type for url link
+
         var title: TextView
         var description: TextView
         var image: ImageView
@@ -36,12 +38,14 @@ class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text = userList[position].title
-        holder.description.text = userList[position].description
+        //updated all code from databinding to synthetic binding
+
+        holder.title.text = userList[position].title.toString()
+        holder.description.text = userList[position].description.toString()
 
         val url = userList[position].image
 
-        Glide.with(holder.image)
+        Glide.with(holder.image) // Now using Glide with holder directly
             .load(url)
             .into(holder.image)
 
