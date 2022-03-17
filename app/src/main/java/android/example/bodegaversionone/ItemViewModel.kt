@@ -26,3 +26,13 @@ class ItemViewModelFactory(private val repository: ItemRepository) : ViewModelPr
         throw IllegalArgumentException("Unknown ViewModel Class")
     }
 }
+
+class ItemViewModelFactory(private val repository: ItemRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>) : T {
+        if(modelClass.isAssignableFrom(ItemViewModel::class.java)) {
+            @Suppress("UNCHECK_CAST")
+            return ItemViewModel(repository) as T
+        }
+        throw java.lang.IllegalArgumentException("Unknown ViewModel Class")
+    }
+}
