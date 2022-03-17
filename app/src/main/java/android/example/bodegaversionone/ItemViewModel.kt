@@ -1,9 +1,7 @@
 package android.example.bodegaversionone
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
+import kotlinx.coroutines.launch
 
 
 class ItemViewModel(private val repository: ItemRepository) : ViewModel() {
@@ -14,7 +12,7 @@ class ItemViewModel(private val repository: ItemRepository) : ViewModel() {
     val allItems : LiveData<List<MyDataItem>> = repository.allItems.asLiveData()
 
     // launches coroutine to insert the data without blocking
-    fun insert(item: MyDataItem) =  viewModelScope {
+    fun insert(item: MyDataItem) =  viewModelScope.launch {
         repository.insert(item)
     }
 }
