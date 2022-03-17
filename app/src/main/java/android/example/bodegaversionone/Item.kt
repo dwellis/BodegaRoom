@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-data class Item(val data: MyDataItem) {
+data class Item(val data: Product) {
 
     // creating an SQL table for Room
     @Entity(tableName = "item_table")

@@ -4,11 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/955362/AndroidStudioProjects/BodegaVersionOne/app/src/main/res/layout/activity_main.xml" value="0.13451086956521738" />
- derek
-        <entry key="..\:/Users/955432/AndroidStudioProjects/BodegaVersionOne/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
-
         <entry key="..\:/Users/955362/AndroidStudioProjects/BodegaVersionOne/app/src/main/res/layout/row_items.xml" value="0.13451086956521738" />
- practice
+        <entry key="..\:/Users/955432/AndroidStudioProjects/BodegaVersionOne/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/955432/AndroidStudioProjects/Training/BodegaVersionOne/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/955432/AndroidStudioProjects/Training/BodegaVersionOne/app/src/main/res/layout/activity_new_item.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/955432/AndroidStudioProjects/Training/BodegaVersionOne/app/src/main/res/layout/row_items.xml" value="0.20520833333333333" />
       </map>
     </option>
   </component>

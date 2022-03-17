@@ -1,3 +1,3 @@
 package android.example.bodegaversionone
 
-class MyData : ArrayList<MyDataItem>()
+class MyData : ArrayList<Product>()

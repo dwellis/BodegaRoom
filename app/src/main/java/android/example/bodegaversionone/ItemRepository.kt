@@ -9,12 +9,12 @@ class ItemRepository(private val itemDAO: ItemDAO) {
 
     // Room moves all queries to a separate thread
     // Flow will notify the observer when the data changes
-    val allItems : Flow<List<MyDataItem>> = itemDAO.getAlphabetizedItems()
+    val allItems : Flow<List<Product>> = itemDAO.getAlphabetizedItems()
 
     // Room automatically handles threads
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
-    suspend fun insert(item: MyDataItem) {
+    suspend fun insert(item: Product) {
         itemDAO.insert(item)
     }
 

@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.row_items.view.*
 
 
 
-class MyAdapter(val context: Context, val userList: List<MyDataItem>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
+class MyAdapter(val context: Context, val userList: List<Product>): RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
 
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {

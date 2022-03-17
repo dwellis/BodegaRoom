@@ -1,6 +1,11 @@
 package android.example.bodegaversionone
 
-data class MyDataItem(
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "item_table")
+data class Product(
+
     val category: String,
     val description: String,
     val id: Int,
@@ -9,3 +14,7 @@ data class MyDataItem(
     val rating: Rating,
     val title: String
 )
+{
+    @PrimaryKey(autoGenerate = true)
+    var pid: Int? = null
+}
